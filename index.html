@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incredible India | Dishan Roy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+  <body>
+
+    <header>
+      <a href="#" class="brand">Travel</a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Explore</a>
+          <a href="#">Gallery</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="home">
+      <video class="video-slide active" src="1.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="2.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="3.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="4.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="5.mp4" autoplay muted loop></video>
+      <div class="content active">
+        <h1>Incredible<br><span>India</span></h1>
+        <p>India is a large multicultural country in South Asia, with a population of over one billion.India is also the second most populous country in the world, and the world's largest democracy. India has grown significantly, in terms of both population and strategic importance, in the last 20 years. Let us give you a brief tour about our country</p>
+        <a href="https://www.britannica.com/place/India">Learn More</a>
+      </div>
+      <div class="content">
+        <h1>Camping.<br><span>Enjoy</span></h1>
+        <p>Camping in India is one of the best ways to connect to nature. Nothing can beat the feel of living in tented lodgings, spending nights under the blanket of stars and indulge in the simple ways of life. Therapeutic and a stress buster, camping is a great experience to escape the cities and feel blessed in the lap of nature. Click on the link below for the 10 best camping sites in India where you can connect with nature.</p>
+        <a href="https://www.tourism-of-india.com/blog/best-camping-sites-in-india/">Learn More</a>
+      </div>
+      <div class="content">
+        <h1>Adventures.<br><span>Off Road</span></h1>
+        <p>Off-roading is a rugged, in-the-wilds activity that involves navigating vehicles on dirt tracks, mountain paths or desert trails. It is pursued on terrain such as sand, gravel, snow, mud, rock, grassland, riverbeds (dry or with shallow water), and other natural terrain – away from unpaved surfaces. Check the link below to explore more</p>
+        <a href="https://www.wikiloc.com/trails/offroading/india">Learn More</a>
+      </div>
+      <div class="content">
+        <h1>Temples<br><span>To Visit</span></h1>
+        <p>Though India is a secular country, Hinduism is the predominant religion in the country. Hence, the presence of a sacred Hindu temple is also quite high in India because, for the several hundred years, rulers from numerous dynasties built those to leave behind their presence in the life of the citizens of the country. Since Indus Valley civilization, the religion which has been practiced in Hinduism and it was prevalent well before the foundation of other vital faiths like Islam, Christianity, and Buddhism. India has witnessed several rules, monarchies, and rulers, along with them well before the rise of any other religion in the world.</p>
+        <a href="https://traveltriangle.com/blog/temples-in-india/">Explore</a>
+      </div>
+      <div class="content">
+        <h1>Delicious Food<br><span>from India</span></h1>
+        <p>Indian dishes are vastly diverse, and not to mention delicious because of the variety of flavors and regions. Indian cuisine is continually put on foodie lists all over the world.Remember that time you and a friend sit down for dinner at an Indian food restaurant. The smell of jasmine and spice awakens your senses. There is a busy clatter of pots and pans coming from the open kitchen.Your mouth is already watering as the waiter comes over with a menu full of delectable Indian dishes. Time for the ultimate question: what should you eat?</p>
+        <a href="https://www.tasteatlas.com/50-most-popular-foods-in-india">Explore</a>
+      </div>
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+    //Javacript for responsive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active");
+    });
+
+    //Javacript for video slider navigation
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function(manual){
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+      });
+    });
+    </script>
+
+  </body>
+</html>
